@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-image: url("HOME.jpg");
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(233, 246, 235);
+            font-size: 70px;
+        }
+
+        form {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid magenta;
+            border-radius: 10px;
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: rgb(61, 213, 14);
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        textarea,
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 2px solid magenta;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        select {
+            height: 100px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: magenta;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: darkmagenta;
+        }
+    </style>
+</head>
+<body>
+    <h1> Registration Form</h1>
+    <hr color="magenta" size="5">
+    <marquee behavior="alternate" bgcolor="green">Welcome to my school</marquee>
+    <img src="HOME.jpg" border="7" width="100%" height="300" title="School" alt="My School">
+    <form>
+        <fieldset>
+            <legend>REGISTRATION</legend>
+            <label for="name">Enter Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="idNo">Enter IDNo:</label>
+            <input type="password" id="idNo" name="idNo">
+            <label for="description">Give us a brief description about yourself:</label>
+            <textarea id="description" cols="30" rows="10">Type statements!!!!!!</textarea>
+		<p>
+		<label>Select your Gender:</label>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female" checked>Female
+            <input type="radio" name="gender" value="Others">Others
+		<p>
+            <label>Choose the programming language you are conversant with:</label>
+            <input type="checkbox" name="lang" value="C++">C++
+            <input type="checkbox" name="lang" value="Java">Java
+            <input type="checkbox" name="lang" value="Javascript">Javascript
+            <input type="checkbox" name="lang" value="PHP" checked>PHP
+            <input type="checkbox" name="lang" value="Python">Python
+		<p>
+            <label>Select your county:</label>
+            <select multiple size="3">
+                <option value="nkr">Nakuru</option>
+                <option value="nrb">Nairobi</option>
+                <option value="ksm" selected>Kisumu</option>
+                <option value="mbs">Mombasa</option>
+                <option value="kiambu">Kiambu</option>
+            </select>
+            <label for="dateInput">DATE:</label>
+            <input type="date" id="myDateInput" name="dateInput" min="2024-02-27" max="2024-12-31" required>
+		<p>
+	 	 <label for="fileUpload">Upload your Passport:</label>
+		  <p><input type="file" id="fileUpload" name="fileupload" accept="image/*">
+    
+            <p><input type="submit" name="submit" value="Submit">
+            <input type="reset" name="reset" value="Reset">
+            <input type="hidden" name="pagename" value="10">
+        </fieldset>
+    </form>
+</body>
+</html>
